@@ -7,11 +7,9 @@ const Header = () => {
   return (
     <header className="lg:flex lg:items-center lg:h-[60px] border-b border-solid border-gray-300">
       <div className="lg:flex lg:items-center lg:justify-between w-full lg:max-w-[975px] lg:mx-auto">
-        <Link href="/">
-          <a className="inline-block lg:max-w-[103px]">
-            <Logo />
-          </a>
-        </Link>
+        <h1 className="inline-block lg:max-w-[103px]">
+          <Logo />
+        </h1>
         <div>Search</div>
         <div className="flex items-center justify-between space-x-2">
           <Link href="/">
@@ -24,7 +22,7 @@ const Header = () => {
               <HeartIcon className="w-7 h-7" />
             </a>
           </Link>
-          <Link href="/">
+          <Link href="/accounts/edit">
             <a>
               <UserCircleIcon className="w-7 h-70" />
             </a>

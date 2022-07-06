@@ -3,12 +3,12 @@ import Login from 'components/Login'
 import { useAuth } from 'hooks/useAuth'
 import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  const { user } = useAuth()
+const HomePage: NextPage = () => {
+  const { currentUser } = useAuth()
 
-  if (!user) return <Login />
+  if (!currentUser) return <Login />
 
   return <FrontPage />
 }
 
-export default Home
+export default HomePage

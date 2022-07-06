@@ -2,10 +2,10 @@ import { AuthContextProps } from 'interfaces/Auth'
 import { createContext } from 'react'
 
 const AuthContext = createContext<AuthContextProps>({
-  user: null,
+  currentUser: null,
   loading: false,
-  signIn: async () => {},
-  signUp: async () => {},
+  login: async () => {},
+  register: async () => {},
   logout: async () => {},
 })
 

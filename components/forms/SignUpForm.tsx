@@ -1,30 +1,30 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useAuth } from 'hooks/useAuth'
-import { LoginFields } from 'interfaces/Login'
+import { SignUpFields } from 'interfaces/Login'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import loginSchema from 'schema/login'
 
-const LoginForm = () => {
-  const { login } = useAuth()
+const SignUpForm = () => {
+  const { register } = useAuth()
 
   const {
-    register,
+    register: registerField,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginFields>({
+  } = useForm<SignUpFields>({
     resolver: yupResolver(loginSchema),
   })
 
   /**
-   * Asynchronously signs in an existing user
+   * Asynchronously registers a new user
    *
    * @async
    * @param {Object} data
    */
-  const onSubmit: SubmitHandler<LoginFields> = async (data: LoginFields) => {
+  const onSubmit: SubmitHandler<SignUpFields> = async (data: SignUpFields) => {
     const { email, password } = data
 
-    await login(email, password)
+    await register(email, password)
   }
 
   return (
@@ -38,7 +38,7 @@ const LoginForm = () => {
             <input
               className="w-full h-9 px-2 text-xs bg-gray-100 border border-solid border-gray-300 rounded-[3px] focus-visible:border-gray-500"
               type="text"
-              {...register('email', { required: true })}
+              {...registerField('email', { required: true })}
             />
             {errors.email && (
               <p className="text-sm text-red-400">
@@ -55,7 +55,7 @@ const LoginForm = () => {
             <input
               className="w-full h-9 px-2 text-xs bg-gray-100 border border-solid border-gray-300 rounded-[3px] focus-visible:border-gray-500"
               type="password"
-              {...register('password', { required: true })}
+              {...registerField('password', { required: true })}
             />
             {errors.password && (
               <p className="text-sm text-red-400">
@@ -69,7 +69,7 @@ const LoginForm = () => {
             className="w-full h-9 font-semibold text-white bg-blue-500 rounded-[3px]"
             type="submit"
           >
-            Log In
+            Sign Up
           </button>
         </div>
       </div>
@@ -77,4 +77,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm
+export default SignUpForm

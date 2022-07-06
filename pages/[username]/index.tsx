@@ -1,10 +1,7 @@
-import { useRouter } from 'next/router'
+import Profile from 'components/Profile'
 
-const UserHome = () => {
-  const router = useRouter()
-  const { username } = router.query
-
-  return <div>Hello {username}</div>
+const UserProfilePage = () => {
+  return <Profile />
 }
 
-export default UserHome
+export default UserProfilePage

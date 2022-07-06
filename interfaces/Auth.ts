@@ -1,10 +1,10 @@
 import { User } from 'firebase/auth'
 
 export interface AuthContextProps {
-  user: User | null
+  currentUser: User | null
   loading: boolean
-  signIn: (email: string, password: string) => Promise<void>
-  signUp: (email: string, password: string) => Promise<void>
+  login: (email: string, password: string) => Promise<void>
+  register: (email: string, password: string) => Promise<void>
   logout: () => Promise<void>
 }
 
