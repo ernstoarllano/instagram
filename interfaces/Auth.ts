@@ -1,6 +1,6 @@
 import { User } from 'firebase/auth'
 
-export interface AuthContextProps {
+export interface AuthContext {
   currentUser: User | null
   loading: boolean
   login: (email: string, password: string) => Promise<void>
@@ -8,6 +8,6 @@ export interface AuthContextProps {
   logout: () => Promise<void>
 }
 
-export interface AuthProviderProps {
+export interface AuthProvider {
   children: React.ReactNode
 }

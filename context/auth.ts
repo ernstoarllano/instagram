@@ -1,7 +1,7 @@
-import { AuthContextProps } from 'interfaces/Auth'
+import { AuthContext } from 'interfaces/Auth'
 import { createContext } from 'react'
 
-const AuthContext = createContext<AuthContextProps>({
+const AuthContext = createContext<AuthContext>({
   currentUser: null,
   loading: false,
   login: async () => {},

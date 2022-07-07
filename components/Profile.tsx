@@ -5,7 +5,6 @@ import Header from './Header'
 const Profile = () => {
   const router = useRouter()
   const { username } = router.query
-
   return (
     <>
       <Header />

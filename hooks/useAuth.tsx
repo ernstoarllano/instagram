@@ -6,12 +6,12 @@ import {
   signOut,
   User,
 } from 'firebase/auth'
-import { AuthProviderProps } from 'interfaces/Auth'
+import { AuthProvider } from 'interfaces/Auth'
 import { auth } from 'lib/firebase'
 import { useRouter } from 'next/router'
 import { useContext, useEffect, useState } from 'react'
 
-const AuthProvider = ({ children }: AuthProviderProps) => {
+const AuthProvider = ({ children }: AuthProvider) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null)
   const [loading, setLoading] = useState<boolean | true>(true)
   const router = useRouter()
