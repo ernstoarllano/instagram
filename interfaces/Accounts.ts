@@ -1,3 +1,5 @@
+import { User, UserPost } from 'interfaces/User'
+
 export interface Accounts {
   children: React.ReactNode
 }
@@ -14,4 +16,21 @@ export interface AccountsContext {
 
 export interface AccountsProvider {
   children: React.ReactNode
+}
+
+export interface AccountsProfilePage {
+  user: User
+}
+
+export interface AccountsPosts {
+  posts: UserPost[]
+}
+
+export interface AccountsProfile {
+  user: User
+  posts: UserPost[]
+}
+
+export interface AccountsProfileHeader {
+  user: User
 }
