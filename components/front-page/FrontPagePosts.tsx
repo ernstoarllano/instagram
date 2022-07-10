@@ -1,13 +1,13 @@
-import { FrontPagePosts } from 'interfaces/FrontPage'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const FrontPagePosts = ({ posts }: FrontPagePosts) => {
+// TODO: Add posts type defintion
+const FrontPagePosts = ({ posts }: any) => {
   return (
     <>
       {posts && (
         <div className="space-y-6">
-          {posts.map((post) => {
+          {posts.map((post: any) => {
             return (
               <div key={post?.id}>
                 <div className="lg:flex lg:items-center lg:p-5 lg:border lg:border-solid lg:border-gray-300 lg:rounded-t-[8px]">

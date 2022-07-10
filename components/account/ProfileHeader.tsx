@@ -1,8 +1,8 @@
-import { AccountsProfileHeader } from 'interfaces/Accounts'
+import { AccountsProfileHeaderProps } from 'interfaces/Accounts'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ProfileHeader = ({ user }: AccountsProfileHeader) => {
+const ProfileHeader = ({ user }: AccountsProfileHeaderProps) => {
   return (
     <div className="lg:flex lg:items-stretch lg:flex-shrink-0 w-full">
       <div className="lg:flex lg:justify-center lg:flex-grow lg:mr-8">

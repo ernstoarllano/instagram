@@ -2,9 +2,9 @@ import FrontPagePosts from 'components/front-page/FrontPagePosts'
 import Header from 'components/Header'
 import ProfileSuggestions from 'components/ProfileSuggestions'
 import ProfileSwitch from 'components/ProfileSwitch'
-import { FrontPage } from 'interfaces/FrontPage'
+import { FrontPageProps } from 'interfaces/FrontPage'
 
-const FrontPage = ({ user, posts, users }: FrontPage) => {
+const FrontPage = ({ user, posts, users }: FrontPageProps) => {
   return (
     <>
       <Header />

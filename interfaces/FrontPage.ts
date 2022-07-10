@@ -1,15 +1,15 @@
 import { User, UserPost } from 'interfaces/User'
 
-export interface FrontPage {
+export interface FrontPageProps {
   user: User
   posts: UserPost[]
   users: User[]
 }
 
-export interface FrontPagePosts {
+export interface FrontPagePostsProps {
   posts: UserPost[]
 }
 
-export interface FrontPageUserSuggestions {
+export interface FrontPageUserSuggestionsProps {
   users: User[]
 }

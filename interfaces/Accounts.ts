@@ -18,19 +18,19 @@ export interface AccountsProvider {
   children: React.ReactNode
 }
 
-export interface AccountsProfilePage {
+export interface AccountsProfilePageProps {
   user: User
 }
 
-export interface AccountsPosts {
+export interface AccountsPostsProps {
   posts: UserPost[]
 }
 
-export interface AccountsProfile {
+export interface AccountsProfileProps {
   user: User
   posts: UserPost[]
 }
 
-export interface AccountsProfileHeader {
+export interface AccountsProfileHeaderProps {
   user: User
 }

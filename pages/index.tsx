@@ -13,7 +13,14 @@ const HomePage = ({ user, users }: any) => {
   return <FrontPage user={user} posts={posts} users={users} />
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { res } = context
+
+  res.setHeader(
+    'Cache-Control',
+    'public s-maxage=10, stale-while-revalidate=59'
+  )
+
   const user = await prisma.user.findUnique({
     where: {
       username: 'pplcallmegiorgio',

@@ -1,8 +1,8 @@
-import { FrontPageUserSuggestions } from 'interfaces/FrontPage'
+import { FrontPageUserSuggestionsProps } from 'interfaces/FrontPage'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ProfileSuggestions = ({ users }: FrontPageUserSuggestions) => {
+const ProfileSuggestions = ({ users }: FrontPageUserSuggestionsProps) => {
   const handleFollow = () => {
     alert('Follow profile')
   }

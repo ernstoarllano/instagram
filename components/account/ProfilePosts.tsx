@@ -1,8 +1,8 @@
-import { AccountsPosts } from 'interfaces/Accounts'
+import { AccountsPostsProps } from 'interfaces/Accounts'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ProfilePosts = ({ posts }: AccountsPosts) => {
+const ProfilePosts = ({ posts }: AccountsPostsProps) => {
   return (
     <div>
       {posts && (
