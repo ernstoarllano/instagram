@@ -1,5 +1,6 @@
-import { HeartIcon } from '@heroicons/react/outline'
+import { HeartIcon, LogoutIcon } from '@heroicons/react/outline'
 import { HomeIcon, UserCircleIcon } from '@heroicons/react/solid'
+import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import Logo from './Logo'
 
@@ -27,6 +28,9 @@ const Header = () => {
               <UserCircleIcon className="w-7 h-70" />
             </a>
           </Link>
+          <button onClick={() => signOut()}>
+            <LogoutIcon className="w-7 h-10" />
+          </button>
         </div>
       </div>
     </header>

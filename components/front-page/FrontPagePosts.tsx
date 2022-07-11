@@ -11,7 +11,7 @@ const FrontPagePosts = ({ posts }: any) => {
             return (
               <div key={post?.id}>
                 <div className="lg:flex lg:items-center lg:p-5 lg:border lg:border-solid lg:border-gray-300 lg:rounded-t-[8px]">
-                  <div className="relative w-[32px] h-[32px] mr-2 rounded-full overflow-clip">
+                  <div className="relative w-[32px] h-[32px] mr-2 rounded-full overflow-hidden">
                     <Link href={`/${post?.author?.username}`}>
                       <a>
                         <Image

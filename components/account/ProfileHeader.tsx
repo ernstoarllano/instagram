@@ -6,7 +6,7 @@ const ProfileHeader = ({ user }: AccountsProfileHeaderProps) => {
   return (
     <div className="lg:flex lg:items-stretch lg:flex-shrink-0 w-full">
       <div className="lg:flex lg:justify-center lg:flex-grow lg:mr-8">
-        <div className="relative w-[150px] h-[150px] rounded-full overflow-clip">
+        <div className="relative w-[150px] h-[150px] rounded-full overflow-hidden">
           {user?.image && (
             <Image
               src={user?.image}

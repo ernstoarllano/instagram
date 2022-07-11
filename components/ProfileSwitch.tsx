@@ -9,7 +9,7 @@ const ProfileSwitch = ({ user }: any) => {
   return (
     <div className="lg:flex lg:items-center lg:justify-between">
       <div className="lg:flex lg:items-center lg:flex-grow">
-        <div className="relative w-[56px] h-[56px] mr-4 rounded-full overflow-clip">
+        <div className="relative w-[56px] h-[56px] mr-4 rounded-full overflow-hidden">
           <Link href={`/${user?.username}`}>
             <a>
               <Image

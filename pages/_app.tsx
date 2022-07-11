@@ -1,12 +1,12 @@
-import AuthProvider from 'hooks/useAuth'
+import { SessionProvider } from 'next-auth/react'
 import type { AppProps } from 'next/app'
 import 'styles/globals.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <AuthProvider>
+    <SessionProvider session={pageProps.session}>
       <Component {...pageProps} />
-    </AuthProvider>
+    </SessionProvider>
   )
 }
 

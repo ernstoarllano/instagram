@@ -1,14 +1,12 @@
 import FrontPage from 'components/FrontPage'
-import Login from 'components/Login'
-import { useAuth } from 'hooks/useAuth'
 import { prisma } from 'lib/prisma'
 import { GetServerSideProps } from 'next'
+import { useSession } from 'next-auth/react'
 
 const HomePage = ({ user, users }: any) => {
-  const { currentUser } = useAuth()
   const { posts } = user
-
-  if (!currentUser) return <Login />
+  const { data } = useSession()
+  console.log(data)
 
   return <FrontPage user={user} posts={posts} users={users} />
 }

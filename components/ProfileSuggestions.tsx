@@ -26,7 +26,7 @@ const ProfileSuggestions = ({ users }: FrontPageUserSuggestionsProps) => {
                 className="lg:flex lg:items-center lg:justify-between"
               >
                 <div className="lg:flex lg:items-center lg:flex-grow">
-                  <div className="relative w-[36px] h-[36px] mr-4 rounded-full overflow-clip">
+                  <div className="relative w-[36px] h-[36px] mr-4 rounded-full overflow-hidden">
                     <Link href={`/${user?.username}`}>
                       <a>
                         <Image
